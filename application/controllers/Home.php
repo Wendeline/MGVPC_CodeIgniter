@@ -5,6 +5,7 @@ class Home extends CI_Controller {
 
     public function __construct()
     {
+        var_dump($this->session);
         parent::__construct();
         if ($this->session->admin != TRUE && $this->session->client=! TRUE){
             redirect('/Login');

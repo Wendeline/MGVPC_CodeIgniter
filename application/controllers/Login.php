@@ -34,14 +34,17 @@ class Login extends CI_Controller {
                                 'mdpAdm'  =>$this->input->post('pwd'),])->count();
         
         if ($nbrep==1) {
+            //$client = Client::where(['mailCli' =>$this->input->post('mail')])->get();
             //enregistrement des données de session
             $sessiondata = array(
                    'nom'  => $this->input->post('mail'),
+                   //'id'  =>$client->idCli,
                    'client'=> TRUE,
                    'admin'=>FALSE
                );
             
             $this->session->set_userdata($sessiondata);
+            var_dump($sessiondata);
             redirect('Home');
         }else if ($nbrep2 == 1){
             $sessiondata = array(
