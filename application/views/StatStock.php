@@ -6,8 +6,8 @@
         $lesProd = Produit::all();
         $prix = 0;
         foreach ($lesProd as $prod) {
-            $stockProd = $prod->qteStock;
-            $prixProd = $prod->PUHTProd;
+            $stockProd = $prod->stockProd;
+            $prixProd = $prod->prixProd;
             $prix = $prix + $prixProd*$stockProd;
         }
         echo "<h3>La valeur de votre stock total est de ". $prix."€. </h3>";
@@ -23,10 +23,10 @@
                 </thead>
                 <tbody>';
                     foreach ($lesProd as $prod) {
-                        $stockProd = $prod->qteStock;
-                        $prixProd = $prod->PUHTProd;
+                        $stockProd = $prod->stockProd;
+                        $prixProd = $prod->prixProd;
                         $price = $prixProd*$stockProd;
-                        echo '<tr><td>'. $prod->refProd . "</td><td>". $price."€ </td><tr>";
+                        echo '<tr><td>'. $prod->idProd . "</td><td>". $price."€ </td><tr>";
                         $price = 0;
                     }
         echo " </tbody>

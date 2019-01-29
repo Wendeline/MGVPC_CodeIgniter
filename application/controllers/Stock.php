@@ -49,23 +49,13 @@ class Stock extends CI_Controller {
     
     public function UpdatePosStock(){        
         $obj = Produit::find($this->input->post('ref'));
-        $qte = $obj->qteStock;
+        $qte = $obj->stockProd;
         $nb = $this->input->post('nb');
         $ref = $this->input->post('ref');
         $qte = $qte + $nb;
-        Produit::where('refProd',$ref)
-                ->update(['qteStock'=>$qte]);
+        Produit::where('idProd',$ref)
+                ->update(['stockProd'=>$qte]);
         redirect('Home');
     }
     
-    public function UpdateNegStock(){
-        $obj = Produit::find($this->input->post('ref'));
-        $qte = $obj->qteStock;
-        $nb = $this->input->post('nb');
-        $ref = $this->input->post('ref');
-        $qte = $qte - $nb;
-        Produit::where('refProd',$ref)
-                ->update(['qteStock'=>$qte]);
-        redirect('Home');
-    }
 }

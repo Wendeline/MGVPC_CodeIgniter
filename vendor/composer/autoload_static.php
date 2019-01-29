@@ -142,8 +142,6 @@ class ComposerStaticInitba4909b3f12fcdff6432dfeb8b0d71b7
 
     public static $classMap = array (
         'Admin' => __DIR__ . '/../..' . '/application/models/Admin.php',
-        'Categorie' => __DIR__ . '/../..' . '/application/models/Categorie.php',
-        'Client' => __DIR__ . '/../..' . '/application/models/Client.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',

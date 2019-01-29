@@ -4,7 +4,6 @@
         <li class="topfirst"><?php echo anchor(current_url(),img('stock.png').' Gestion du stock','style="height:18px;line-height:18px;"') ?>
             <ul>
             <li><a href="<?php echo base_url('Stock/EntreeDeStock')?>">Saisir une entrée en stock</a></li>
-            <li><a href="<?php echo base_url('Stock/SortieDeStock')?>">Saisir une sortie de stock</a></li>
             <li><a href="<?php echo base_url('Stock/AccesStat')?>">Statistiques</a></li>
             </ul>
         </li>
