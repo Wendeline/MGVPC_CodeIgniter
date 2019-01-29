@@ -7,21 +7,20 @@ class Prod extends CI_Controller {
     {
         parent::__construct();
 
-        if ($this->session->client != TRUE) {
+        if ($this->session->adm != TRUE) {
             redirect('/Login');
         }
     }
     
 
-    public function AjoutPanier($ref = null)
+    public function AjoutProd($ref = null)
     {
         if ($ref == null ){
             redirect('/Home');
         }
         
         if (Produit::find($ref)) {
-            $this->cart->add($ref);
-            $panier = $this->cart->content();
+            //squelette
             redirect(base_url('Home'));
         }
         else {

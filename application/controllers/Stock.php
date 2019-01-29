@@ -7,7 +7,7 @@ class Stock extends CI_Controller {
     {
         parent::__construct();
         
-        if ($this->session->admin != TRUE) {
+        if ($this->session->adm != TRUE) {
             redirect('/Login');
         }
     }

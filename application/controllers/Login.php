@@ -11,7 +11,7 @@ class Login extends CI_Controller {
     public function index()
     {        
         $this->load->view('common/header.php');
-        if ($this->session->admin == TRUE || $this->session->client == TRUE) {
+        if ($this->session->adm == TRUE) {
             redirect('Home');
          }
          else {
@@ -25,32 +25,13 @@ class Login extends CI_Controller {
         
     public function check_admin()
     {
-        $nbrep = Client::where([
-                        'mailCli'   =>$this->input->post('mail'),
-                        'mdpCli'  =>$this->input->post('pwd'),
-                    ])->count();
-        
-        $nbrep2 = Admin::where(['mailAdm'   =>$this->input->post('mail'),
+        $nbrep = Admin::where(['mailAdm'   =>$this->input->post('mail'),
                                 'mdpAdm'  =>$this->input->post('pwd'),])->count();
         
-        if ($nbrep==1) {
-            //$client = Client::where(['mailCli' =>$this->input->post('mail')])->get();
-            //enregistrement des données de session
+        if ($nbrep == 1){
             $sessiondata = array(
                    'nom'  => $this->input->post('mail'),
-                   //'id'  =>$client->idCli,
-                   'client'=> TRUE,
-                   'admin'=>FALSE
-               );
-            
-            $this->session->set_userdata($sessiondata);
-            var_dump($sessiondata);
-            redirect('Home');
-        }else if ($nbrep2 == 1){
-            $sessiondata = array(
-                   'nom'  => $this->input->post('mail'),
-                   'admin'=> TRUE,
-                   'client'=> FALSE
+                   'adm'=> TRUE
                );
             $this->session->set_userdata($sessiondata);
             redirect('Home');
@@ -69,8 +50,7 @@ class Login extends CI_Controller {
     {
         $sessiondata = array(
                    'nom'  => "",
-                   'admin'=> FALSE,
-                   'client'=>FALSE
+                   'adm'=> FALSE
                );
             $this->session->set_userdata($sessiondata);
         
