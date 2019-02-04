@@ -15,15 +15,15 @@
                     echo "<b>".$produit->stockProd."</b> <i>en stock</i>";
                     echo "<br>";
                     echo "<br>";
-                    //echo '<a class="btn" href="'. base_url('Prod/AjoutPanier/'.$produit->idProd) .'">Acheter</a>';
-                    //echo "<br>";
-                    //echo "<br>";
+                    echo '<a class="btn" href="'. base_url('Prod/Update/'.$produit->idProd) .'">Modifier</a>';
+                    echo "<br>";
+                    echo "<br>";
+                    if ($produit->qteStock == 0) {
+                      echo '<a class="btn" href="'. base_url('Prod/Delete/'. $produit->idProd) .'">Supprimer</a>';
+                      echo "<br>";
+                      echo "<br>";
+                    }
                     echo "</td>";
-                    /*if ($produit->qteStock == 0) {
-                      echo '<a class="btn" href="'. base_url('Prod/Delete/'. $produit->refProd) .'">Supprimer</a>';
-                      echo "<br>";
-                      echo "<br>";
-                    }*/
                     $cpt++;
                     if ($cpt%3==0) {
                         echo "</tr><tr>";

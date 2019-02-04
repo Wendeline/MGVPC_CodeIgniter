@@ -19,7 +19,6 @@
             echo form_label('PUHT','prix');
             echo form_input('prix', $produit->prixProd);
             echo '<br>';
-            echo img('prod/'.$produit->refProd.'.jpg','height="150" width="150"');
 
             ?>
 
