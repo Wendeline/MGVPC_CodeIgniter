@@ -47,7 +47,7 @@ header {
     border-top-right-radius: 0.8em;
     border-bottom-left-radius: 0.8em;
     border-bottom-right-radius: 0.8em;
-    background:#B35C00;
+    background: #b30000;
 }
 nav {
     clear:both;
@@ -69,7 +69,7 @@ article {
     border-bottom-left-radius: 0.8em;
     border-bottom-right-radius: 0.8em;
     background: #FFFFFF;
-    color: #663400;
+    color: #000000;
     text-align: justify;
     border-bottom: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
@@ -77,8 +77,8 @@ article {
 
 footer {
     display:block;
-    clear:both ;
-    background:#B35C00;
+    clear:both;
+    background: #ec1818;
     margin: 0px;
     padding:10px;
     border:1px solid #e7e2d7;
@@ -232,16 +232,10 @@ ul#menu a{
     color:#ffffff;
     cursor:pointer;
     padding:5px 30px 10px 5px;
-    background-image: -webkit-gradient(
-	linear,
-	right top,
-	left bottom,
-	color-stop(0.70, #4D9899),
-	color-stop(1, #DDDDDD)
-    );
+    background-image: -webkit-gradient(   linear,   right top,   left bottom,   color-stop(0.70, #ec1818),   color-stop(1, #DDDDDD)      );
     background-image: -o-linear-gradient(left bottom, #4D9899 70%, #DDDDDD 100%);
     background-image: -moz-linear-gradient(left bottom, #4D9899 70%, #DDDDDD 100%);
-    background-image: -webkit-linear-gradient(left bottom, #4D9899 70%, #DDDDDD 100%);
+    background-image: -webkit-linear-gradient(left bottom, #bd2c2c 70%, #e09a35 100%);
     background-image: -ms-linear-gradient(left bottom, #4D9899 70%, #DDDDDD 100%);
     border-width:0 0 0 1px;
     border-style:solid;
@@ -323,7 +317,7 @@ ul#menu li.toplast:hover>a {
     cursor:default;
 }
 .case_orange td {
-    border: 3px solid #B35C00;
+    border: 3px solid #ec1818;
     padding:5px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
@@ -381,7 +375,7 @@ ul#menu li.toplast:hover>a {
     border-bottom-left-radius:10px;
 }
 .tableau_bleu tr:nth-child(odd){
-    background-color:#deeded;
+    background-color: #ec8b182e;
 }
 .tableau_bleu tr:nth-child(even){
     background-color:#ffffff;
@@ -406,7 +400,7 @@ ul#menu li.toplast:hover>a {
     border-width:0px 0px 0px 0px;
 }
 .tableau_bleu tr:first-child td {
-    background-color:#4d9899;
+    background-color: #ce3232;
     text-align:center;
     font-weight:bold;
     color:#ffffff;
@@ -414,7 +408,7 @@ ul#menu li.toplast:hover>a {
 
 .btn {
   font-size: 1vw;
-  color: #b35c00;
+  color: #b30000;
   text-decoration: none;
   background: #d1d1d1;
   padding: 0.5em 1.0em;
